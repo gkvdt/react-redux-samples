@@ -50,7 +50,7 @@ const todosReducer = (state = initialState, { type, payload }) => {
       }
 
     case ADD_TODO:
-      if (state.todo.length < 2) return;
+      if (state.todo.length < 2) return state;
       if (state.todoId == 0) {
         let newItem = {
           id: generateId(state),
